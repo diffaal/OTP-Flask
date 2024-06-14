@@ -2,5 +2,5 @@ from abc import ABC, abstractmethod
 
 class OTPSender(ABC):
     @abstractmethod
-    async def send_otp(self, phone_number, otp_code):
+    def send_otp(self, phone_number, otp_code):
         pass

@@ -12,6 +12,7 @@ class ResponseMessage(Enum):
     WA_SENDER_CONNECTION_ERROR = "Connection error to WA Sender"
     WA_SENDER_TIMEOUT = "Connection timeout to WA Sender"
     WA_SENDER_INTERNAL_ERROR = "Internal server error response from WA Sender"
+    OTP_BEING_PROCESSED = "OTP is being processed"
 
 class ActivityType(Enum):
     GENERATE_OTP = "GENERATE_OTP"

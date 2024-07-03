@@ -42,9 +42,9 @@ class WASender(OTPSender):
 
         status_code = response.status_code
         logger.info(f"Whatsapp Gateway Send Message Response Status Code: {status_code}")
-        if status_code == 500:
-            logger.error(ResponseMessage.WA_SENDER_INTERNAL_ERROR.value)
-            raise InternalErrorException(ResponseMessage.WA_SENDER_INTERNAL_ERROR.value, None, None)
+        if status_code != 200:
+            logger.error(ResponseMessage.WA_SENDER_RESPONSE_NOT_OK.value)
+            raise InternalErrorException(ResponseMessage.WA_SENDER_RESPONSE_NOT_OK.value, None, None)
         
         res_body = response.json()
         logger.info(f"Whatsapp Gateway Send Message Response Body:\n{json.dumps(res_body, indent=2)}")

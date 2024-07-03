@@ -1,6 +1,5 @@
-from datetime import datetime, timedelta
+from datetime import datetime
 
-from src.config import CONFIG
 from src.exceptions.app_exception import BadRequestException
 from src.helpers.otp_activity_validator import OTPActivityValidator
 from src.models.enum import ActivityType, ResponseMessage
@@ -30,6 +29,9 @@ class ValidateOTPService:
     
     def validate_otp_code(self, phone_number, otp_code):
         otp_list = OtpList.get_otp_list_by_phone_number(phone_number)
+
+        if not otp_list:
+            raise BadRequestException(ResponseMessage.OTP_CODE_NOT_FOUND.value, None)
 
         now = datetime.now()
         if now > otp_list.expired_time:

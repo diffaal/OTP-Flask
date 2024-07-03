@@ -2,7 +2,7 @@ from datetime import datetime, timedelta
 
 from src.config import CONFIG
 from src.exceptions.app_exception import BadRequestException
-from src.models.enum import ActivityType, ResponseMessage
+from src.models.enums import ActivityType, ResponseMessage
 from src.models.otp_activity import OtpActivity
 from src.tools.response import make_otp_response_data
 

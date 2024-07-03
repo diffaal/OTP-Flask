@@ -2,7 +2,7 @@ from http import HTTPStatus
 from traceback import format_exc
 
 from src.extensions import db, logger
-from src.models.enum import ResponseMessage
+from src.models.enums import ResponseMessage
 from src.tools.response import make_json_response
 
 class OTPFlaskException(Exception):
@@ -47,7 +47,7 @@ class InternalErrorException(OTPFlaskException):
         return make_json_response(self.code, self.message, self.data)
 
 class DatabaseException(InternalErrorException):
-    def __init__(self, error_cause: Exception, data = None,) -> None:
+    def __init__(self, error_cause: Exception, data = None) -> None:
         super().__init__(ResponseMessage.DATABASE_ERROR.value, data, error_cause)
 
 def error_logger(e, traceback = False):

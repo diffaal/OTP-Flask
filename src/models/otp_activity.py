@@ -4,7 +4,7 @@ import sqlalchemy.exc
 
 from src.exceptions.app_exception import DatabaseException, InternalErrorException
 from src.models.base_model import BaseModel
-from src.models.enum import ActivityType, ResponseMessage
+from src.models.enums import ActivityType, ResponseMessage
 
 class OtpActivity(BaseModel):
     __tablename__ = "otp_activity"

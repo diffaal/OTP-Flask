@@ -3,13 +3,12 @@ from marshmallow import (
     validate, 
     validates, 
     validates_schema, 
-    ValidationError, 
-    post_load
+    ValidationError
 )
 
 from src.extensions import ma
 from src.models.country_code import country_code_db
-from src.models.enum import OTPSender
+from src.models.enums import OTPSender
 
 otp_senders = [otp_sender.value for otp_sender in OTPSender]
 

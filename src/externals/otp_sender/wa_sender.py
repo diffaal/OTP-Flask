@@ -5,7 +5,7 @@ from src.config import CONFIG
 from src.exceptions.app_exception import InternalErrorException
 from src.extensions import logger
 from src.externals.otp_sender import OTPSender
-from src.models.enum import ResponseMessage
+from src.models.enums import ResponseMessage
 
 class WASender(OTPSender):
     def __init__(self) -> None:

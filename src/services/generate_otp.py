@@ -5,7 +5,7 @@ from src.externals.otp_sender.wa_sender import WASender
 from src.externals.otp_sender.sms_sender import SMSSender
 from src.helpers.otp_activity_validator import OTPActivityValidator
 from src.helpers.otp_code_generator import OTPCodeGenerator
-from src.models.enum import ActivityType, OTPSender
+from src.models.enums import ActivityType, OTPSender
 from src.models.otp_list import OtpList
 from src.tools.response import make_otp_response_data
 

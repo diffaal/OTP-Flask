@@ -2,7 +2,7 @@ from datetime import datetime
 
 from src.exceptions.app_exception import BadRequestException
 from src.helpers.otp_activity_validator import OTPActivityValidator
-from src.models.enum import ActivityType, ResponseMessage
+from src.models.enums import ActivityType, ResponseMessage
 from src.models.otp_list import OtpList
 from src.tools.response import make_otp_response_data
 

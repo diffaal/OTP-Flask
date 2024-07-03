@@ -5,7 +5,7 @@ from flask import (
 from flask_restful import Resource
 from http import HTTPStatus
 
-from src.models.enum import ResponseMessage
+from src.models.enums import ResponseMessage
 from src.schemas.generate_otp import generate_otp_schema
 from src.schemas.validate_otp import validate_otp_schema
 from src.services.generate_otp import generate_otp_service

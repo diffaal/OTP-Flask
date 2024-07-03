@@ -6,7 +6,7 @@ from src.exceptions.app_exception import OTPFlaskException, error_logger
 from src.extensions import db
 from src.tools.response import make_json_response
 
-from src.models.enum import ResponseMessage
+from src.models.enums import ResponseMessage
 
 def app_error_handler(e: OTPFlaskException) -> Response:
     return e.process_error_response()
